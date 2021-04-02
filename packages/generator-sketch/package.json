@@ -1,0 +1,19 @@
+{
+  "name": "@nowseemee/daisy-chain-generator-sketch",
+  "version": "1.0.0",
+  "author": "Daniel Beck <daniel@beck.win>",
+  "license": "MIT",
+  "scripts": {
+    "preserve": "rimraf ./storybook-static ./screenshot.jpg ./newSketch.sketch && cp -R ../storybook/storybook-static ./",
+    "serve": "http-server -p 13337 ./storybook-static",
+    "generate": "node screenshot.js",
+    "start": "start-server-and-test serve http://127.0.0.1:13337 generate"
+  },
+  "devDependencies": {
+    "http-server": "^0.12.3",
+    "puppeteer": "^8.0.0",
+    "sketch-constructor": "^1.24.2",
+    "rimraf": "^3.0.2",
+    "start-server-and-test": "^1.12.1"
+  }
+}

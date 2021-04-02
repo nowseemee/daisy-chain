@@ -1,0 +1,22 @@
+import { Component, h } from '@stencil/core';
+
+@Component({
+  tag: '{{tagName}}'
+})
+export class {{className}} {
+  render() {
+    return (
+      <template>
+        <svg>
+          <defs>
+            {{#each defs}}
+              <g id="icon-{{this.key}}">
+                {{{this.markup}}}
+              </g>
+            {{/each}}
+          </defs>
+        </svg>
+      </template>
+    );
+  }
+}

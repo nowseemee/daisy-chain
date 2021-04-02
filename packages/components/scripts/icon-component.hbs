@@ -1,0 +1,32 @@
+import { Component, Prop, Host, h } from '@stencil/core';
+
+@Component({
+  tag: '{{tagName}}'
+})
+export class {{className}} {
+  /** (optional) The width and height in pixels */
+  @Prop() size?: number = 24;
+  /** (optional) Sets the icon color via the `fill` attribute */
+  @Prop() color?: string = 'currentColor'; 
+  /** (optional) If `true`, the icon changes visually */
+  @Prop() selected?: boolean = false;
+  /** (optional) If `true` the SVG element will get `aria-hidden="true"` */
+  @Prop() decorative?: boolean = false;
+  /** (optional) When using the icon standalone, make it meaningful for accessibility */
+  @Prop() accessibilityTitle?: string;
+
+  render() {
+    const ariaHidden = this.decorative ? { 'aria-hidden': 'true' } : {}
+
+    return (
+      <Host style={ { display: 'inline-flex' } }>
+        <svg xmlns="http://www.w3.org/2000/svg" width={this.size} height={this.size} viewBox="0 0 24 24" {...ariaHidden}>
+          {this.accessibilityTitle && <title>{this.accessibilityTitle}</title>}
+          <g fill={this.color}>
+            {this.selected ? (<g>{{{markup.selected}}}</g>) : (<g>{{{markup.default}}}</g>)}
+          </g>
+        </svg>
+      </Host>
+    );
+  }
+}
