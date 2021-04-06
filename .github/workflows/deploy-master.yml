@@ -1,0 +1,51 @@
+name: deploy production
+on:
+  push:
+    branches:
+      - master
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: restore lerna
+        id: yarn-cache
+        uses: actions/cache@v2
+        with:
+          path: |
+            node_modules
+            */*/node_modules
+          key: ${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
+
+      - name: Install project dependencies
+        if: steps.yarn-cache.outputs.cache-hit != 'true'
+        run: yarn
+
+      - name: Run Lerna bootstrap
+        run: |
+          yarn bootstrap
+
+      - name: Build Design Token
+        run: |
+          cd packages/design-tokens
+          yarn build
+      - name: Build Components
+        run: |
+          cd packages/components
+          yarn build
+      - name: Build Storybook
+        run: |
+          cd packages/storybook
+          yarn build
+      - uses: amondnet/vercel-action@v20
+        id: vercel-action-prod
+        with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
+          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
+          working-directory: packages/storybook/storybook-static
+          alias-domains: |
+            daisy-chain-git-refs-headsmaster-nowseemee.vercel.app
+            daisy-chain.vercel.app
+            daisy-chain-nowseemee.vercel.app
