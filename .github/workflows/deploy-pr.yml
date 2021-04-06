@@ -5,7 +5,7 @@ on:
       - master
 
 jobs:
-  deploy-prod:
+  deploy-pr:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
