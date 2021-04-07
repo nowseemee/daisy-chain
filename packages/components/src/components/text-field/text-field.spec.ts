@@ -10,12 +10,10 @@ describe('dc-text-field', () => {
     expect(root).toMatchInlineSnapshot(`
       <dc-text-field>
         <mock:shadow-root>
-          <div>
-            <label>
-              <dc-icon-action-play></dc-icon-action-play>
-              <input id="fname" name="fname" type="text">
-            </label>
-          </div>
+          <label class="dc-text-field">
+            <dc-icon-action-play></dc-icon-action-play>
+            <input id="fname" name="fname" type="text">
+          </label>
         </mock:shadow-root>
       </dc-text-field>
     `);
