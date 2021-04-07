@@ -1,8 +1,8 @@
-name: deploy production
+name: deploy next
 on:
   push:
     branches:
-      - master
+      - next
 
 jobs:
   deploy-prod:
@@ -71,7 +71,7 @@ jobs:
         with:
           token: ${{ secrets.GH_TOKEN }}
           target_url: https://daisy-chain.vercel.app
-          environment: production
+          environment: next
 
       - name: Deploy to Vercel
         uses: amondnet/vercel-action@v20
@@ -82,17 +82,16 @@ jobs:
           vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
           working-directory: packages/storybook/storybook-static
           alias-domains: |
-            daisy-chain-git-refs-headsmaster-nowseemee.vercel.app
-            daisy-chain.vercel.app
-            daisy-chain-nowseemee.vercel.app
+            daisy-chain-git-refs-headsnext-nowseemee.vercel.app
+            daisy-chain-next-nowseemee.vercel.app
 
       - name: Update deployment status (success)
         if: success()
         uses: chrnorm/deployment-status@releases/v1
         with:
           token: ${{ secrets.GH_TOKEN }}
-          target_url: https://daisy-chain.vercel.app
-          environment_url: https://daisy-chain.vercel.app
+          target_url: https://daisy-chain-next-nowseemee.vercel.app
+          environment_url: https://daisy-chain-next-nowseemee.vercel.app
           state: 'success'
           deployment_id: ${{ steps.deployment.outputs.deployment_id }}
 
@@ -101,7 +100,7 @@ jobs:
         uses: chrnorm/deployment-status@releases/v1
         with:
           token: ${{ secrets.GH_TOKEN }}
-          target_url: https://daisy-chain.vercel.app
-          environment_url: https://daisy-chain.vercel.app
+          target_url: https://daisy-chain-next-nowseemee.vercel.app
+          environment_url: https://daisy-chain-next-nowseemee.vercel.app
           state: 'failure'
           deployment_id: ${{ steps.deployment.outputs.deployment_id }}
