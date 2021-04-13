@@ -12,6 +12,7 @@
   "license": "MIT",
   "scripts": {
     "bootstrap": "lerna bootstrap",
-    "generate": "lerna run generate"
+    "generate": "lerna run generate",
+    "publish": "lerna publish --force-publish @daisy-chain/components,@daisy-chain/components-react,@daisy-chain/design-tokens"
   }
 }

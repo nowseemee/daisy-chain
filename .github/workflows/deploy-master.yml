@@ -20,7 +20,6 @@ jobs:
           key: ${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
 
       - name: Install project dependencies
-        if: steps.yarn-cache.outputs.cache-hit != 'true'
         run: yarn
 
       - name: Run Lerna bootstrap
