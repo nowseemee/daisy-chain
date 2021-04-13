@@ -18,7 +18,7 @@
     "postcss": "^8.2.9",
     "prettier": "^2.2.1"
   },
-  "gitHead": "c96f51d977799e376f146bd59e979855bdfd3ac8",
+  "gitHead": "3f891f6fbd9111fba972fc2b179bddde17853ea0",
   "publishConfig": {
     "access": "public"
   }
