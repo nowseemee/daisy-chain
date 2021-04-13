@@ -1,6 +1,6 @@
 {
   "name": "@daisy-chain/design-tokens",
-  "version": "1.0.0-beta.3",
+  "version": "1.0.0-beta.4",
   "files": [
     "dist/",
     "src/"
@@ -17,7 +17,7 @@
     "postcss": "^8.2.9",
     "prettier": "^2.2.1"
   },
-  "gitHead": "30555f5f46d5a90f63e6cc6180e47ce171fd186c",
+  "gitHead": "f946821c7e3dc685ba906ee84875e1939dab964c",
   "publishConfig": {
     "access": "public"
   }
