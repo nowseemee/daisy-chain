@@ -5,7 +5,7 @@ const fg = require('fast-glob');
 const fs = require('fs-extra');
 const SVGO = require('svgo');
 const { camelCase, startCase, upperFirst, groupBy, map, find } = require('lodash');
-const Handlebars = require('handlebars'); // using Handlebars for consistency with components-sketch
+const Handlebars = require('handlebars');
 
 const { parse } = require('svg-parser');
 const toHTML = require('hast-util-to-html');
@@ -14,7 +14,7 @@ const svgo = new SVGO({
   plugins: [{ removeViewBox: false }, { removeXMLNS: true }],
 });
 
-const INPUT_GLOB = './data/icons/**/*.svg';
+const INPUT_GLOB = `./data/${process.env.WHITELABEL ? 'icons' : 'icons-whitelabel'}/**/*.svg`;
 const OUTPUT_PATH = './src/components/icons';
 const ICON_TEMPLATE_PATH = './scripts/icon-component.hbs';
 const EXT = '.svg';
@@ -34,7 +34,7 @@ async function main() {
       const item = await svgo.optimize(file);
 
       const state = path.basename(filepath, EXT);
-      const cleanPath = path.dirname(filepath).replace('./data/icons/', '');
+      const cleanPath = path.dirname(filepath).replace(INPUT_GLOB.replace('**/*.svg', ''), '');
       const pathParts = cleanPath.split('/');
       const key = cleanPath.replace(/\//gi, '-');
       const category = pathParts[0];
