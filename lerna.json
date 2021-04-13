@@ -2,7 +2,15 @@
   "packages": [
     "packages/*"
   ],
-  "version": "0.0.0",
+  "version": "1.0.0-beta.0",
   "npmClient": "yarn",
-  "useWorkspaces": true
+  "useWorkspaces": true,
+  "command": {
+    "publish": {
+      "conventionalCommits": true,
+      "message": "chore(release): publish",
+      "allowBranch": "master",
+      "access": "public"
+    }
+  }
 }

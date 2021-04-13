@@ -1,7 +1,7 @@
 {
   "name": "@daisy-chain/storybook",
-  "version": "1.0.0-beta.0",
   "main": "index.js",
+  "private": true,
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.13.14",

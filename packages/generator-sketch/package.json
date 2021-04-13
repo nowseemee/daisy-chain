@@ -1,7 +1,6 @@
 {
   "name": "@daisy-chain/generator-sketch",
-  "version": "1.0.0-beta.0",
-  "author": "Daniel Beck <daniel@beck.win>",
+  "private": true,
   "license": "MIT",
   "scripts": {
     "preserve": "rimraf ./storybook-static ./screenshot.jpg ./newSketch.sketch && cp -R ../storybook/storybook-static ./",
