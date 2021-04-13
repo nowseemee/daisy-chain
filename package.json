@@ -15,9 +15,10 @@
     "generate": "lerna run generate",
     "format": "lerna run format",
     "preforce-publish": "yarn generate && node set-package-name.js && yarn format",
-    "force-publish": "lerna publish --skip-git --force-publish @daisy-chain/components,@daisy-chain/components-react,@daisy-chain/design-tokens/@daisy-chain/components-whitelabel,@daisy-chain/components-react-whitelabel,@daisy-chain/design-tokens-whitelabel",
+    "force-publish": "lerna publish -y --skip-git --force-publish @daisy-chain/components,@daisy-chain/components-react,@daisy-chain/design-tokens/@daisy-chain/components-whitelabel,@daisy-chain/components-react-whitelabel,@daisy-chain/design-tokens-whitelabel",
     "postforce-publish": "git commit . -m 'chore(release): publish' && git push origin head",
-    "preforce-publish-whitelabel": "WHITELABEL=1 yarn preforce-publish && git commit . -m 'chore(release-whitelabel): publish'",
-    "force-publish-whitelabel": "WHITELABEL=1 lerna publish from-package --skip-git --force-publish @daisy-chain/components,@daisy-chain/components-react,@daisy-chain/design-tokens/@daisy-chain/components-whitelabel,@daisy-chain/components-react-whitelabel,@daisy-chain/design-tokens-whitelabel"
+    "preforce-publish-whitelabel": "WHITELABEL=1 yarn preforce-publish && git commit . -m 'chore(release-whitelabel): publish' && git push origin head",
+    "force-publish-whitelabel": "WHITELABEL=1 lerna publish -y from-package --skip-git --force-publish @daisy-chain/components,@daisy-chain/components-react,@daisy-chain/design-tokens/@daisy-chain/components-whitelabel,@daisy-chain/components-react-whitelabel,@daisy-chain/design-tokens-whitelabel",
+    "release": "yarn force-publish && yarn force-publish-whitelabel"
   }
 }
