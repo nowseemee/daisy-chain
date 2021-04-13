@@ -1,7 +1,7 @@
 {
   "name": "@daisy-chain/components-react-whitelabel",
   "sideEffects": false,
-  "version": "1.0.17",
+  "version": "1.0.18",
   "description": "React specific wrapper for component-library",
   "scripts": {
     "build": "yarn clean && yarn compile",
