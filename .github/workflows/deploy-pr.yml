@@ -32,15 +32,15 @@ jobs:
         run: |
           yarn generate
 
-      - name: Test components
-        run: |
-          cd packages/components
-            yarn test
-
       - name: Build Components
         run: |
           cd packages/components
           yarn build
+
+      - name: Test components
+        run: |
+          cd packages/components
+            yarn test
 
       - name: Build Storybook
         run: |
