@@ -1,6 +1,6 @@
 {
   "name": "@daisy-chain/components-whitelabel",
-  "version": "1.0.21",
+  "version": "1.0.24",
   "description": "Daisy Chain Stencil Components",
   "main": "dist/index.cjs.js",
   "module": "dist/custom-elements/index.js",
@@ -44,7 +44,7 @@
     "svg-parser": "^2.0.4",
     "svgo": "1.3.2"
   },
-  "gitHead": "3f891f6fbd9111fba972fc2b179bddde17853ea0",
+  "gitHead": "141a554a4b68758b4f4cc7809bf4149a7f439d56",
   "publishConfig": {
     "access": "public"
   }

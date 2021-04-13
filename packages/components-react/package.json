@@ -1,7 +1,7 @@
 {
   "name": "@daisy-chain/components-react-whitelabel",
   "sideEffects": false,
-  "version": "1.0.21",
+  "version": "1.0.24",
   "description": "React specific wrapper for component-library",
   "scripts": {
     "build": "yarn clean && yarn compile",
@@ -27,7 +27,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   },
-  "gitHead": "3f891f6fbd9111fba972fc2b179bddde17853ea0",
+  "gitHead": "141a554a4b68758b4f4cc7809bf4149a7f439d56",
   "publishConfig": {
     "access": "public"
   }
