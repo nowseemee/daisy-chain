@@ -11,13 +11,25 @@ const frameworkTargets = [
 export const config: Config = {
   namespace: 'daisy-chain-components',
   globalScript: 'src/global/daisy-chain.ts',
-  globalStyle: process.env.WHITELABEL ? 'src/global/daisy-chain.whitelabel.css' : 'src/global/daisy-chain.css',
+  globalStyle: process.env.WHITELABEL
+    ? 'src/global/daisy-chain.whitelabel.css'
+    : 'src/global/daisy-chain.css',
   outputTargets: [
     ...frameworkTargets,
     {
       type: 'dist',
       esmLoaderPath: '../loader',
-      copy: [...(process.env.WHITELABEL ? [{ src: 'fonts-whitelabel/montserrat', dest: 'montserrat', warn: true }] : [{ src: 'fonts/playfair', dest: 'playfair', warn: true }])],
+      copy: [
+        ...(process.env.WHITELABEL
+          ? [
+              {
+                src: 'fonts-whitelabel/montserrat',
+                dest: 'montserrat',
+                warn: true,
+              },
+            ]
+          : [{ src: 'fonts/playfair', dest: 'playfair', warn: true }]),
+      ],
     },
     {
       type: 'dist-custom-elements-bundle',

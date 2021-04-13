@@ -4,7 +4,12 @@
   font-style: normal;
   font-weight: 900;
   src: url('./playfair/playfair-display-v21-latin-ext-900.eot');
-  src: local(''), url('./playfair/playfair-display-v21-latin-ext-900.eot?#iefix') format('embedded-opentype'), url('./playfair/playfair-display-v21-latin-ext-900.woff2') format('woff2'),
-    url('./playfair/playfair-display-v21-latin-ext-900.woff') format('woff'), url('./playfair/playfair-display-v21-latin-ext-900.ttf') format('truetype'),
-    url('./playfair/playfair-display-v21-latin-ext-900.svg#PlayfairDisplay') format('svg');
+  src: local(''),
+    url('./playfair/playfair-display-v21-latin-ext-900.eot?#iefix')
+      format('embedded-opentype'),
+    url('./playfair/playfair-display-v21-latin-ext-900.woff2') format('woff2'),
+    url('./playfair/playfair-display-v21-latin-ext-900.woff') format('woff'),
+    url('./playfair/playfair-display-v21-latin-ext-900.ttf') format('truetype'),
+    url('./playfair/playfair-display-v21-latin-ext-900.svg#PlayfairDisplay')
+      format('svg');
 }

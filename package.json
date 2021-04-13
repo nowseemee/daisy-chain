@@ -13,6 +13,8 @@
   "scripts": {
     "bootstrap": "lerna bootstrap",
     "generate": "lerna run generate",
+    "format": "lerna run format",
+    "prelerna-publish": "yarn generate && node set-package-name.js",
     "lerna-publish": "lerna publish --force-publish @daisy-chain/components,@daisy-chain/components-react,@daisy-chain/design-tokens"
   }
 }

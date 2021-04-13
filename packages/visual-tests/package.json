@@ -1,12 +1,14 @@
 {
   "name": "@daisy-chain/visual-test",
   "private": true,
+  "version": "0.0.1",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
     "copy": "rimraf ./storybook-static && cp -R ../storybook/storybook-static ./",
     "pretest": "yarn copy",
-    "test": "PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true jest --forceExit"
+    "test": "PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true jest --forceExit",
+    "format": "prettier --write \"*.js\" \"src/*.{html,tsx,ts,css,json,js}\" \"!src/**/*.d.ts\""
   },
   "dependencies": {
     "jest": "^26.6.3",

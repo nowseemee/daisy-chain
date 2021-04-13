@@ -20,7 +20,7 @@ export class {{className}} {
 
     return (
       <Host style={ { display: 'inline-flex' } }>
-        <svg xmlns="http://www.w3.org/2000/svg" width={this.size} height={this.size} viewBox="0 0 24 24" {...ariaHidden}>
+        <svg xmlns="http://www.w3.org/2000/svg" width={this.size} height={this.size} viewBox="0 0 512 512" {...ariaHidden}>
           {this.accessibilityTitle && <title>{this.accessibilityTitle}</title>}
           <g fill={this.color}>
             {this.selected ? (<g>{{{markup.selected}}}</g>) : (<g>{{{markup.default}}}</g>)}
