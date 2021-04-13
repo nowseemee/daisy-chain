@@ -1,6 +1,6 @@
 {
-  "name": "@nowseemee/daisy-chain-design-tokens",
-  "version": "1.0.0",
+  "name": "@daisy-chain/design-tokens",
+  "version": "1.0.0-beta.0",
   "author": "Daniel Beck <daniel@beck.win>",
   "files": [
     "dist/",
@@ -9,7 +9,7 @@
   "type": "module",
   "license": "MIT",
   "scripts": {
-    "build": "node ./scripts/build.js"
+    "generate": "node ./scripts/build.js"
   },
   "devDependencies": {
     "color": "^3.1.3",

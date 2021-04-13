@@ -1,7 +1,7 @@
 {
-  "name": "@nowseemee/daisy-chain-components-react",
+  "name": "@daisy-chain/components-react",
   "sideEffects": false,
-  "version": "1.0.0",
+  "version": "1.0.0-beta.0",
   "description": "React specific wrapper for component-library",
   "scripts": {
     "build": "yarn clean && yarn compile",

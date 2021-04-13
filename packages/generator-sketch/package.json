@@ -1,14 +1,14 @@
 {
-  "name": "@nowseemee/daisy-chain-generator-sketch",
-  "version": "1.0.0",
+  "name": "@daisy-chain/generator-sketch",
+  "version": "1.0.0-beta.0",
   "author": "Daniel Beck <daniel@beck.win>",
   "license": "MIT",
   "scripts": {
     "preserve": "rimraf ./storybook-static ./screenshot.jpg ./newSketch.sketch && cp -R ../storybook/storybook-static ./",
     "serve": "http-server -p 13337 ./storybook-static",
-    "generate": "node screenshot.js",
-    "postgenerate": "cp ./newSketch.sketch ../storybook/storybook-static",
-    "start": "start-server-and-test serve http://127.0.0.1:13337 generate"
+    "screenshot": "node screenshot.js",
+    "postscreenshot": "cp ./newSketch.sketch ../storybook/storybook-static",
+    "build": "start-server-and-test serve http://127.0.0.1:13337 screenshot"
   },
   "devDependencies": {
     "http-server": "^0.12.3",

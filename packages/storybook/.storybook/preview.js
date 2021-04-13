@@ -1,6 +1,6 @@
-import '@nowseemee/daisy-chain-design-tokens/dist/daisy-chain-design-tokens.css';
+import '@daisy-chain/components/dist/daisy-chain-components/daisy-chain-components.css';
 
-import { defineCustomElements, applyPolyfills } from '@nowseemee/daisy-chain-components/loader';
+import { defineCustomElements, applyPolyfills } from '@daisy-chain/components/loader';
 
 applyPolyfills().then(() => {
   defineCustomElements(window);

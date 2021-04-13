@@ -2,6 +2,8 @@ dist/
 www/
 loader/
 hydrate/
+src/components/icons/
+components.d.ts
 
 
 *~

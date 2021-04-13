@@ -1,6 +1,6 @@
 {
-  "name": "@nowseemee/daisy-chain-storybook",
-  "version": "1.0.0",
+  "name": "@daisy-chain/storybook",
+  "version": "1.0.0-beta.0",
   "main": "index.js",
   "license": "MIT",
   "devDependencies": {

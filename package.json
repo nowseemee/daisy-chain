@@ -11,6 +11,7 @@
   "author": "Daniel Beck <daniel@beck.win>",
   "license": "MIT",
   "scripts": {
-    "bootstrap": "lerna bootstrap"
+    "bootstrap": "lerna bootstrap",
+    "generate": "lerna run generate"
   }
 }

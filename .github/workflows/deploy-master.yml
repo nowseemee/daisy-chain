@@ -28,10 +28,9 @@ jobs:
         run: |
           yarn bootstrap
 
-      - name: Build Design Token
+      - name: Generate Icons & Tokens
         run: |
-          cd packages/design-tokens
-          yarn build
+          yarn generate
 
       - name: Test components
         run: |
@@ -48,10 +47,10 @@ jobs:
           cd packages/storybook
           yarn build
 
-      - name: Generate Sketch
+      - name: Build Sketch
         run: |
           cd packages/generator-sketch
-          yarn start
+          yarn build
 
       - name: Run visual tests
         run: |
