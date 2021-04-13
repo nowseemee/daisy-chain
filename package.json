@@ -17,7 +17,7 @@
     "preforce-publish": "yarn generate && node set-package-name.js && yarn format",
     "force-publish": "lerna publish -y --no-git-tag-version --force-publish @daisy-chain/components,@daisy-chain/components-react,@daisy-chain/design-tokens/@daisy-chain/components-whitelabel,@daisy-chain/components-react-whitelabel,@daisy-chain/design-tokens-whitelabel",
     "postforce-publish": "yarn force-publish-whitelabel",
-    "preforce-publish-whitelabel": "WHITELABEL=1 yarn preforce-publish && git commit . -m 'chore: release' && git push origin head" ,
+    "preforce-publish-whitelabel": "git pull && WHITELABEL=1 yarn preforce-publish && git commit . -m 'chore: release' && git push origin head" ,
     "force-publish-whitelabel": "WHITELABEL=1 lerna publish -y from-package --no-git-tag-version --no-push --force-publish @daisy-chain/components,@daisy-chain/components-react,@daisy-chain/design-tokens/@daisy-chain/components-whitelabel,@daisy-chain/components-react-whitelabel,@daisy-chain/design-tokens-whitelabel"
   }
 }
