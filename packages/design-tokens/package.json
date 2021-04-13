@@ -1,6 +1,6 @@
 {
   "name": "@daisy-chain/design-tokens",
-  "version": "1.0.18",
+  "version": "1.0.20",
   "files": [
     "dist/",
     "src/"
