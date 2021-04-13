@@ -1,6 +1,6 @@
 {
   "name": "@daisy-chain/generator-sketch",
-  "version": "0.0.1",
+  "private": true,
   "license": "MIT",
   "scripts": {
     "preserve": "rimraf ./storybook-static ./screenshot.jpg ./newSketch.sketch && cp -R ../storybook/storybook-static ./",
@@ -12,8 +12,9 @@
   "devDependencies": {
     "http-server": "^0.12.3",
     "puppeteer": "^8.0.0",
-    "sketch-constructor": "^1.24.2",
     "rimraf": "^3.0.2",
+    "sketch-constructor": "^1.24.2",
     "start-server-and-test": "^1.12.1"
-  }
+  },
+  "gitHead": "c6bc0358c89f399931461e640b4afebb6e22b42e"
 }
