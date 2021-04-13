@@ -16,7 +16,6 @@
   "dependencies": {},
   "scripts": {
     "start": "start-storybook -p 6006",
-    "build": "build-storybook --quiet",
-    "postbuild": "mv fonts.zip ./storybook-static/fonts.zip"
+    "build": "build-storybook --quiet"
   }
 }
