@@ -1,5 +1,5 @@
 {
-  "name": "@daisy-chain/design-tokens",
+  "name": "@daisy-chain/design-tokens-whitelabel",
   "version": "1.0.21",
   "files": [
     "dist/",
