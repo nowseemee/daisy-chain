@@ -1,6 +1,6 @@
 {
   "name": "@daisy-chain/design-tokens-whitelabel",
-  "version": "1.0.15",
+  "version": "1.0.16",
   "files": [
     "dist/",
     "src/"
@@ -18,7 +18,7 @@
     "postcss": "^8.2.9",
     "prettier": "^2.2.1"
   },
-  "gitHead": "c6bc0358c89f399931461e640b4afebb6e22b42e",
+  "gitHead": "c96f51d977799e376f146bd59e979855bdfd3ac8",
   "publishConfig": {
     "access": "public"
   }
