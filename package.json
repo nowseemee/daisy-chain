@@ -14,7 +14,7 @@
     "bootstrap": "lerna bootstrap",
     "generate": "lerna run generate",
     "format": "lerna run format",
-    "preforce-publish": "yarn generate && node set-package-name.js",
+    "preforce-publish": "yarn generate && node set-package-name.js && yarn format",
     "force-publish": "lerna publish --force-publish @daisy-chain/components,@daisy-chain/components-react,@daisy-chain/design-tokens"
   }
 }
