@@ -1,5 +1,5 @@
 {
-  "name": "@daisy-chain/components-whitelabel",
+  "name": "@daisy-chain/components",
   "version": "1.0.18",
   "description": "Daisy Chain Stencil Components",
   "main": "dist/index.cjs.js",

@@ -1,5 +1,5 @@
 {
-  "name": "@daisy-chain/components-react-whitelabel",
+  "name": "@daisy-chain/components-react",
   "sideEffects": false,
   "version": "1.0.18",
   "description": "React specific wrapper for component-library",
