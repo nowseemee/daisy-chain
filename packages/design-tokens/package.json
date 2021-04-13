@@ -1,7 +1,6 @@
 {
   "name": "@daisy-chain/design-tokens",
   "version": "1.0.0-beta.0",
-  "author": "Daniel Beck <daniel@beck.win>",
   "files": [
     "dist/",
     "src/"
