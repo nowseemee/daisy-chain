@@ -15,9 +15,9 @@
     "generate": "lerna run generate",
     "format": "lerna run format",
     "preforce-publish": "yarn generate && node set-package-name.js && yarn format",
-    "force-publish": "lerna publish --force-publish @daisy-chain/components,@daisy-chain/components-react,@daisy-chain/design-tokens/@daisy-chain/components-whitelabel,@daisy-chain/components-react-whitelabel,@daisy-chain/design-tokens-whitelabel",
+    "force-publish": "lerna publish --skip-git --force-publish @daisy-chain/components,@daisy-chain/components-react,@daisy-chain/design-tokens/@daisy-chain/components-whitelabel,@daisy-chain/components-react-whitelabel,@daisy-chain/design-tokens-whitelabel",
     "postforce-publish": "git commit . -m 'chore(release): publish' && git push origin head",
     "preforce-publish-whitelabel": "yarn preforce-publish && git commit . -m 'chore(release-whitelabel): publish'",
-    "force-publish-whitelabel": "lerna publish from-package --force-publish @daisy-chain/components,@daisy-chain/components-react,@daisy-chain/design-tokens/@daisy-chain/components-whitelabel,@daisy-chain/components-react-whitelabel,@daisy-chain/design-tokens-whitelabel"
+    "force-publish-whitelabel": "lerna publish from-package --skip-git --force-publish @daisy-chain/components,@daisy-chain/components-react,@daisy-chain/design-tokens/@daisy-chain/components-whitelabel,@daisy-chain/components-react-whitelabel,@daisy-chain/design-tokens-whitelabel"
   }
 }
