@@ -1,7 +1,7 @@
 {
   "name": "@daisy-chain/components-react",
   "sideEffects": false,
-  "version": "1.0.0-beta.5",
+  "version": "1.0.0-beta.6",
   "description": "React specific wrapper for component-library",
   "scripts": {
     "build": "yarn clean && yarn compile",
@@ -25,7 +25,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   },
-  "gitHead": "f946821c7e3dc685ba906ee84875e1939dab964c",
+  "gitHead": "c414b7fb19585ab13cde9ad4935ce6d56b7f12a0",
   "publishConfig": {
     "access": "public"
   }

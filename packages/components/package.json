@@ -1,6 +1,6 @@
 {
   "name": "@daisy-chain/components",
-  "version": "1.0.0-beta.5",
+  "version": "1.0.0-beta.6",
   "description": "Daisy Chain Stencil Components",
   "main": "dist/index.cjs.js",
   "module": "dist/custom-elements/index.js",
@@ -42,7 +42,7 @@
     "svgo": "1.3.2",
     "web-animations-js": "^2.3.2"
   },
-  "gitHead": "f946821c7e3dc685ba906ee84875e1939dab964c",
+  "gitHead": "c414b7fb19585ab13cde9ad4935ce6d56b7f12a0",
   "publishConfig": {
     "access": "public"
   }
