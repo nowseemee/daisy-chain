@@ -1,7 +1,7 @@
 {
   "name": "@daisy-chain/generator-sketch",
   "private": true,
-  "version": "0.0.1",
+  "version": "1.0.7",
   "license": "MIT",
   "scripts": {
     "preserve": "rimraf ./storybook-static ./screenshot.jpg ./newSketch.sketch && cp -R ../storybook/storybook-static ./",
