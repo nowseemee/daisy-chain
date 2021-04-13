@@ -23,7 +23,7 @@
     "generate": "yarn generate-icons",
     "generate-icons": "node ./scripts/generate-icons.js",
     "prepublish": "yarn build",
-    "format": "prettier --write \"package.json\" \"src/**/*.{html,tsx,ts,css,json}\""
+    "format": "prettier --write \"package.json\" \"src/**/*.{html,tsx,ts,css,json}\" \"!src/**/*.d.ts\""
   },
   "dependencies": {
     "@stencil/core": "^2.0.1",
