@@ -1,0 +1,34 @@
+name: upload to s3
+on:
+  push:
+    branches:
+      - s3
+
+jobs:
+  s3_upload:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: ZIP Storybook
+        run: |
+          cd packages/storybook
+          mkdir storybook-static
+          cd storybook-static
+          touch test.txt
+          echo "hello" >> test.txt
+          zip -r deploy.zip .
+
+      - name: Upload to S3
+        run: |
+          aws --region eu-central-1 s3 cp packages/storybook/storybook-static/deploy.zip s3://daisy-chain-fu/
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+
+#      - name: Publish to AWS S3
+#        uses: opspresso/action-s3-sync@master
+#        env:
+#          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+#          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+#          FROM_PATH: "packages/storybook/storybook-static/deploy.zip"
+#          DEST_PATH: "s3://daisy-chain-fu"
