@@ -5,3 +5,5 @@ node_modules/
 .vercel
 yarn-error.log
 .DS_Store
+.npmrc
+lerna-debug.log

@@ -2,7 +2,7 @@
   "name": "@daisy-chain/storybook",
   "main": "index.js",
   "private": true,
-  "version": "1.0.9",
+  "version": "1.0.33",
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.13.14",
@@ -18,6 +18,5 @@
     "start": "start-storybook -p 6006",
     "prebuild": "rimraf storybook-static node_modules/.cache",
     "build": "build-storybook --quiet"
-  },
-  "gitHead": "c6bc0358c89f399931461e640b4afebb6e22b42e"
+  }
 }
