@@ -9,6 +9,11 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - name: Configure CI Git User
+        run: |
+          git config --global user.name '@daisy-chain'
+          git config --global user.email 'daisy-chain@users.noreply.github.com'
+
       - name: Authenticate with Registry
         run: |
           yarn logout
@@ -35,6 +40,20 @@ jobs:
       - name: Run Lerna bootstrap
         run: |
           yarn bootstrap
+
+      - name: Generate Artifacts
+        run: |
+          yarn generate
+
+      - name: Build Components
+        run: |
+          cd packages/components
+          yarn build
+
+      - name: Build React Proxy
+        run: |
+          cd packages/components-react
+          yarn build
 
       - name: Publish Brand
         run: |
@@ -45,6 +64,11 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - name: Configure CI Git User
+        run: |
+          git config --global user.name '@daisy-chain'
+          git config --global user.email 'daisy-chain@users.noreply.github.com'
+
       - name: Authenticate with Registry
         run: |
           yarn logout
@@ -72,6 +96,20 @@ jobs:
         run: |
           yarn bootstrap
 
-      - name: Publish Brand
+      - name: Generate Artifacts
+        run: |
+          WHITELABEL=1 yarn generate
+
+      - name: Build Components
+        run: |
+          cd packages/components
+          WHITELABEL=1 yarn build
+
+      - name: Build React Proxy
+        run: |
+          cd packages/components-react
+          WHITELABEL=1 yarn build
+
+      - name: NPM Publish
         run: |
           yarn publish-whitelabel
