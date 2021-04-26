@@ -16,6 +16,5 @@
     "jest-image-snapshot": "4.3.0",
     "jest-puppeteer-docker": "1.4.2",
     "rimraf": "^3.0.2"
-  },
-  "gitHead": "c6bc0358c89f399931461e640b4afebb6e22b42e"
+  }
 }

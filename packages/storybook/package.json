@@ -18,6 +18,5 @@
     "start": "start-storybook -p 6006",
     "prebuild": "rimraf storybook-static node_modules/.cache",
     "build": "build-storybook --quiet"
-  },
-  "gitHead": "c6bc0358c89f399931461e640b4afebb6e22b42e"
+  }
 }

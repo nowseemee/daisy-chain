@@ -16,6 +16,5 @@
     "rimraf": "^3.0.2",
     "sketch-constructor": "^1.24.2",
     "start-server-and-test": "^1.12.1"
-  },
-  "gitHead": "c6bc0358c89f399931461e640b4afebb6e22b42e"
+  }
 }
