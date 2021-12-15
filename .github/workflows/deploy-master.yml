@@ -45,6 +45,16 @@ jobs:
           cd packages/storybook
           yarn build
 
+      - name: setup git authentication
+        run: |
+          git config --global user.email "daniel@beck.win"
+          git config --global user.name "Daniel Beck"
+          git remote set-url origin https://nowseemee:${{ secrets.GITHUB_TOKEN }}@github.com/nowseemee/daisy-chain
+
+      - name: Deploy Storybook
+        run: |
+          yarn workspace @daisy-chain/storybook deploy
+
       - name: Build Sketch
         run: |
           cd packages/generator-sketch
