@@ -21,6 +21,6 @@
     "prebuild": "rimraf storybook-static node_modules/.cache",
     "build": "build-storybook --quiet",
     "predeploy": "yarn build-storybook",
-    "deploy": "gh-pages -d storybook-static"
+    "deploy": "gh-pages -d storybook-static -m 'chore(release): deploy storybook to gh-pages'"
   }
 }

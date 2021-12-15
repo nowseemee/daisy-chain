@@ -49,7 +49,6 @@ jobs:
         run: |
           git config --global user.email "daniel@beck.win"
           git config --global user.name "Daniel Beck"
-          git remote set-url origin https://nowseemee:${{ secrets.GITHUB_TOKEN }}@github.com/nowseemee/daisy-chain
 
       - name: Deploy Storybook
         run: |

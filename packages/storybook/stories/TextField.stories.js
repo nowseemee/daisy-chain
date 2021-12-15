@@ -9,5 +9,5 @@ const Template = args => TextField(args);
 export const Standard = Template.bind({});
 Standard.args = {
   label: "Who's your daddy?",
-  value: 'daddy@cool.io',
+  value: 'daddy@cool.wtf',
 };
